@@ -11,8 +11,8 @@ https://templatemo.com/tm-590-topic-listing
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
+  --primary-color:                #1B263B;
+  --secondary-color: #A3BFFA; /* Light Blue */
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #80d0c7;
   --custom-btn-bg-hover-color:    #13547a;
@@ -20,6 +20,8 @@ https://templatemo.com/tm-590-topic-listing
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #13547a;
+  --accent-color: #FFFFFF; /* White */
+
 
   --body-font-family:             'Open Sans', sans-serif;
   --title-font-family:            'Montserrat', sans-serif;
@@ -43,6 +45,11 @@ https://templatemo.com/tm-590-topic-listing
   --font-weight-medium:           500;
   --font-weight-semibold:         600;
   --font-weight-bold:             700;
+
+  --neutral-color: #4B5EAA; /* Dark Grey */
+  --highlight-color: #4169E1; /* Blue for buttons */
+
+
 }
 
 body {
@@ -196,6 +203,17 @@ strong {
   border-bottom-color: var(--primary-color);
   color: var(--primary-color);
 }
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+.navbar-brand, .nav-link {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color) !important;
+}
 
 
 /*---------------------------------------
@@ -270,6 +288,21 @@ strong {
 
 .site-header .custom-icon:hover {
   color: var(--secondary-color);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), url('../images/school-hero.jpg'); /* Replace with school image */
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+.hero-section h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+.hero-section h6 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
 }
 
 
@@ -519,7 +552,62 @@ strong {
   max-width: 150px;
 }
 
-
+.section-padding {
+    background-color: var(--accent-color);
+    padding: 4rem 0;
+}
+.section-bg {
+    background-color: var(--secondary-color);
+}
+h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+p, ul, ol {
+    color: var(--text-color, #333333);
+    font-family: 'Open Sans', sans-serif;
+}
+.custom-block {
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.custom-block:hover {
+    transform: translateY(-5px);
+}
+.custom-block h5 {
+    color: var(--primary-color);
+}
+.custom-block-image {
+    border-radius: 10px;
+}
+.custom-btn {
+    background-color: var(--highlight-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.custom-btn:hover {
+    background-color: var(--neutral-color);
+    color: var(--accent-color);
+}
+.site-footer {
+    background-color: var(--primary-color);
+    padding: 3rem 0;
+}
+.site-footer-title, .site-footer-link, .copyright-text {
+    color: var(--accent-color) !important;
+}
+.site-footer-link:hover {
+    color: var(--secondary-color) !important;
+}
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2rem; }
+    .hero-section h6 { font-size: 1rem; }
+    .custom-block { padding: 1rem; }
+}
 /*---------------------------------------
   TOPICS              
 -----------------------------------------*/
