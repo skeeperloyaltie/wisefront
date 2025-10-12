@@ -367,42 +367,208 @@
     width: 20px;
     height: 20px;
 }
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
 
-/* Responsive Adjustments for Hero */
+.section-title:hover {
+    color: var(--highlight-color);
+}
+
+/* About Section */
+.about-text {
+    background-color: var(--primary-color);
+    border: 1px solid var(--neutral-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-text:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.img-fluid:hover {
+    opacity: 0.9;
+}
+
+/* Programs Section */
+.custom-block {
+    background-color: var(--primary-color);
+    border: 1px solid var(--neutral-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.custom-block:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.program-title {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.custom-block-image {
+    margin-top: 15px;
+    border: 1px solid var(--neutral-color);
+    padding: 5px;
+}
+
+/* General Section Enhancements */
+.section-padding {
+    padding: 60px 0;
+    background-color: var(--primary-color); /* Ensure white background */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.section-title:hover {
+    color: var(--highlight-color);
+}
+
+/* Lead Text */
+.lead {
+    font-size: 1.1rem;
+    color: var(--neutral-color);
+}
+
+/* Uniform Card */
+.uniform-card {
+    background-color: var(--primary-color);
+    border: 1px solid var(--neutral-color);
+    border-radius: 10px;
+    padding: 20px; /* Internal padding for content */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: 100%; /* Equal height cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.uniform-card:hover, .hover-effect:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Card Title and Sub-Title */
+.card-title {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--neutral-color);
+    padding-bottom: 5px;
+}
+
+/* Requirements List */
+.requirements-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.requirements-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Uniform Description */
+.uniform-card p {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Note Alert */
+.alert-info {
+    background-color: rgba(65, 105, 225, 0.1); /* Light blue tint */
+    border: 1px solid var(--highlight-color);
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments for Uniform Section */
 @media (max-width: 991px) {
-    .hero-section {
-        min-height: 60vh;
-        padding: 10px 0;
+    .section-padding {
+        padding: 40px 0;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .uniform-card {
+        padding: 15px;
+        margin-bottom: 20px;
     }
 
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .card-title {
+        font-size: 1.3rem;
     }
 
-    .custom-btn {
-        padding: 0.5rem 1.5rem;
+    .sub-title {
+        font-size: 1.1rem;
+    }
+
+    .requirements-list {
+        padding-left: 15px;
+    }
+
+    .requirements-list li {
         font-size: 0.9rem;
     }
 
-    .floating-card {
-        display: none; /* Hide card on mobile for simplicity */
-    }
-
-    .hero-left-bg {
-        display: none; /* Hide left image on mobile */
-    }
-
-    .hero-content {
-        padding-left: 0;
+    .alert-info {
+        font-size: 0.95rem;
+        padding: 10px;
     }
 }
 
-@media (min-width: 992px) {
-    .floating-card {
-        display: block;
+@media (max-width: 576px) {
+    .col-lg-4 {
+        margin-bottom: 20px;
     }
 }
