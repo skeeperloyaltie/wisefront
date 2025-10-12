@@ -16,45 +16,160 @@
     <link href="css/templatemo-topic-listing.css" rel="stylesheet">
 </head>
 <body id="top">
-    <main>
+    <main class="container-fluid">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container navbar-container">
+                <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <i class="bi-book"></i>
+                    <img src="images/logo-Photoroom-Photoroom.png" alt="Wisedorme School Logo" class="navbar-logo">
                     <span>Wisedorme School</span>
                 </a>
+                <!-- Vertical Divider -->
+                <div class="navbar-divider"></div>
+                <!-- Navigation Grid -->
+                <div class="navbar-nav-grid">
+                    <!-- Top Row: Secondary Links -->
+                    <div class="navbar-top-row">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link link-boxed-red" href="#request-info">Request Info</a></li>
+                            <li class="nav-item"><a class="nav-link link-boxed-red" href="#login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link link-boxed-blue" href="#parent-portal">Parent Portal</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link link-filled" href="#search"><i class="bi-search"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Main Row: Primary Navigation -->
+                    <div class="navbar-main-row">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto" style="width: 100%;">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_2" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                        <li><a class="dropdown-item" href="#mission-vision">Mission & Vision</a></li>
+                                        <li><a class="dropdown-item" href="#history">History</a></li>
+                                        <li><a class="dropdown-item" href="#leadership">Leadership</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_3" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+                                    <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                                        <li><a class="dropdown-item" href="#cbc">CBC (Play Group - Grade 9)</a></li>
+                                        <li><a class="dropdown-item" href="#jss">Junior Secondary (JSS)</a></li>
+                                        <li><a class="dropdown-item" href="#eight-four-four">8-4-4 Transition</a></li>
+                                        <li><a class="dropdown-item" href="#special-programs">Special Programs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_4" id="uniformDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Uniform & Requirements</a>
+                                    <ul class="dropdown-menu" aria-labelledby="uniformDropdown">
+                                        <li><a class="dropdown-item" href="#pre-school-uniform">Pre-School</a></li>
+                                        <li><a class="dropdown-item" href="#upper-primary-uniform">Upper Primary</a></li>
+                                        <li><a class="dropdown-item" href="#jss-uniform">JSS</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_5" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                                    <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                                        <li><a class="dropdown-item" href="#sports">Sports</a></li>
+                                        <li><a class="dropdown-item" href="#clubs">Clubs & Societies</a></li>
+                                        <li><a class="dropdown-item" href="#arts-music">Arts & Music</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_6" id="facultyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
+                                    <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
+                                        <li><a class="dropdown-item" href="#leadership">Leadership Team</a></li>
+                                        <li><a class="dropdown-item" href="#teachers">Teachers</a></li>
+                                        <li><a class="dropdown-item" href="#staff">Support Staff</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#section_7" id="admissionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admissions</a>
+                                    <ul class="dropdown-menu" aria-labelledby="admissionsDropdown">
+                                        <li><a class="dropdown-item" href="#admission-process">Process</a></li>
+                                        <li><a class="dropdown-item" href="#admission-requirements">Requirements</a></li>
+                                        <li><a class="dropdown-item" href="#admission-faqs">FAQs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_8">Testimonials</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="#section_9">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toggler for Mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_1">Home</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">About</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Programs</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Uniform & Requirements</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_5">Activities</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Faculty</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_7">Admissions</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_8">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_9">Contact</a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-12 mx-auto text-center">
-                        <h1 class="text-white">Wisedorme Multipurpose Centre School</h1>
-                        <h6 class="text-white">Empowering Future Leaders with CBC, JSS, and 8-4-4 Education</h6>
-                        <a href="#section_7" class="btn custom-btn mt-4">Apply Now</a>
+       <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center" id="section_1">
+    <div class="custom-container">
+        <div class="row">
+            <!-- Left Aligned Image Background -->
+            <div class="col-lg-4 col-12 hero-left-bg">
+                <img src="images/landing/20250708_160853.jpg" alt="School Background" class="hero-left-image" id="hero-left-image">
+                <div class="loading-indicator" id="hero-loading">Loading...</div>
+            </div>
+            <!-- Right Content and Card -->
+            <div class="col-lg-8 col-12">
+                <div class="hero-content text-center">
+                    <h1 class="text-white hero-title">Wisedorme Multipurpose Centre School</h1>
+                    <h6 class="text-white hero-subtitle">Empowering Future Leaders with CBC, JSS, and 8-4-4 Education</h6>
+                    <a href="#section_7" class="btn custom-btn mt-4">Apply Now</a>
+                </div>
+                <!-- Floating Card with Carousel -->
+                <div class="floating-card">
+                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/landing/20250708_160837.jpg" class="d-block w-100" alt="School Campus" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Campus Life</h5>
+                                    <p>Explore our vibrant school environment.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/landing/20250708_160858.jpg" class="d-block w-100" alt="Classroom Activity" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Learning in Action</h5>
+                                    <p>Engaging classrooms for all ages.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/landing/20250708_160901.jpg" class="d-block w-100" alt="Sports Day" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Sports Excellence</h5>
+                                    <p>Celebrating student achievements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- About Section -->
         <section class="section-padding" id="section_2">
@@ -360,5 +475,118 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- Add this before the closing </body> tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Select hero section images
+    const heroLeftImage = document.getElementById('hero-left-image');
+    const heroLoadingIndicator = document.getElementById('hero-loading');
+    const carouselImages = document.querySelectorAll('#heroCarousel .carousel-item img');
+
+    // Function to check and load image
+    function loadImage(img, isPriority = false) {
+        return new Promise((resolve, reject) => {
+            const loadingIndicator = document.createElement('div');
+            loadingIndicator.textContent = 'Loading...';
+            loadingIndicator.className = 'loading-indicator';
+            img.parentNode.appendChild(loadingIndicator);
+
+            const imgTemp = new Image();
+            imgTemp.onload = () => {
+                // Check image size
+                if (imgTemp.width > 1000 || imgTemp.height > 1000) {
+                    // Resize if too large (using canvas for client-side resizing)
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const maxSize = 800;
+                    let width = imgTemp.width;
+                    let height = imgTemp.height;
+
+                    if (width > height) {
+                        if (width > maxSize) {
+                            height *= maxSize / width;
+                            width = maxSize;
+                        }
+                    } else {
+                        if (height > maxSize) {
+                            width *= maxSize / height;
+                            height = maxSize;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    ctx.drawImage(imgTemp, 0, 0, width, height);
+                    img.src = canvas.toDataURL();
+                } else {
+                    img.src = imgTemp.src;
+                }
+
+                loadingIndicator.remove();
+                resolve();
+            };
+            imgTemp.onerror = () => {
+                loadingIndicator.remove();
+                reject(new Error('Image failed to load'));
+            };
+            imgTemp.src = img.getAttribute('src');
+        });
+    }
+
+    // Preload hero left image
+    if (heroLeftImage) {
+        heroLoadingIndicator.style.display = 'block';
+        loadImage(heroLeftImage, true)
+            .then(() => {
+                heroLoadingIndicator.style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Hero image load error:', error);
+                heroLoadingIndicator.textContent = 'Failed to load image';
+            });
+    }
+
+    // Load carousel images with delay to prioritize hero image
+    if (carouselImages.length > 0) {
+        carouselImages.forEach((img, index) => {
+            setTimeout(() => {
+                loadImage(img)
+                    .catch((error) => {
+                        console.error('Carousel image load error:', error);
+                    });
+            }, index * 500); // Staggered loading (500ms delay per image)
+        });
+    }
+
+    // Fallback for lazy loading support
+    if ('loading' in HTMLImageElement.prototype) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach(img => {
+            img.decoding = "async"; // Improve decoding performance
+        });
+    } else {
+        // Polyfill for browsers without native lazy loading
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach(img => {
+            img.removeAttribute('loading');
+            img.setAttribute('data-src', img.src);
+            img.src = ''; // Clear src to prevent immediate load
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadImage(img)
+                            .catch((error) => {
+                                console.error('Lazy load error:', error);
+                            });
+                        obs.unobserve(entry.target);
+                    }
+                });
+            });
+            observer.observe(img);
+        });
+    }
+});
+</script>
 </body>
 </html>
