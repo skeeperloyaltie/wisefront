@@ -1,101 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset="UTF-8">
+    <title>School Portal – Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Assets -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/animate/animate.css">
+    <link rel="stylesheet" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .alert { margin-top:1rem; font-size: 0.9rem; }
+        .login100-form-title { margin-bottom: 2rem; }
+
+        /* Full-screen layout */
+        .login-container {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Left: Form */
+        .login-form-wrapper {
+            background: white;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 420px;
+            z-index: 10;
+        }
+
+        /* Right: Canvas */
+        .canvas-wrapper {
+            position: fixed;
+            top: 0; right: 0; bottom: 0;
+            width: 50%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        canvas#particles {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .canvas-wrapper { display: none; }
+            .login-form-wrapper { max-width: 380px; padding: 30px; }
+        }
+    </style>
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
-				</div>
 
-				<form class="login100-form validate-form">
-					<span class="login100-form-title">
-						Member Login
-					</span>
+<div class="login-container">
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
+    <!-- ==================== LEFT: LOGIN FORM ==================== -->
+    <div class="login-form-wrapper">
+        <form id="loginForm" class="login100-form validate-form">
+            <span class="login100-form-title">School Portal Login</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
+            <div class="wrap-input100 validate-input" data-validate="Username is required">
+                <input class="input100" type="text" name="username" placeholder="Username" required>
+                <span class="focus-input100"></span>
+                <span class="symbol-input100"><i class="fa fa-user"></i></span>
+            </div>
 
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>
+            <div class="wrap-input100 validate-input" data-validate="Password is required">
+                <input class="input100" type="password" name="password" placeholder="Password" required>
+                <span class="focus-input100"></span>
+                <span class="symbol-input100"><i class="fa fa-lock"></i></span>
+            </div>
 
-					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	
+            <div class="container-login100-form-btn">
+                <button type="submit" class="login100-form-btn">Login</button>
+            </div>
 
-	
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+            <div id="loginMsg" class="alert" style="display:none;"></div>
+        </form>
+    </div>
+
+    <!-- ==================== RIGHT: CANVAS ANIMATION ==================== -->
+    <div class="canvas-wrapper">
+        <canvas id="particles"></canvas>
+    </div>
+
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<script>$('.js-tilt').tilt({scale:1.1});</script>
+
+<script>
+/* ==================== CONFIG ==================== */
+const API = {
+    login: '/api/users/login/'
+};
+
+function getCsrfToken() {
+    const name = 'csrftoken=';
+    const cookies = document.cookie.split(';');
+    for (let c of cookies) {
+        c = c.trim();
+        if (c.startsWith(name)) return c.substring(name.length);
+    }
+    return '';
+}
+
+function log(msg, data = null) {
+    console.log('%c[LOGIN]', 'color: #28a745; font-weight: bold;', msg);
+    if (data) console.table ? console.table(data) : console.log(data);
+}
+
+/* ==================== HELPERS ==================== */
+function showMsg(msg, isError = true) {
+    const $el = $('#loginMsg');
+    $el.removeClass('alert-success alert-danger')
+       .addClass(isError ? 'alert-danger' : 'alert-success')
+       .html('<small>' + msg + '</small>').show();
+    setTimeout(() => $el.fadeOut(), 5000);
+}
+
+function ajaxSettings() {
+    const token = sessionStorage.getItem('authToken');
+    const headers = { 'X-CSRFToken': getCsrfToken() };
+    if (token) headers['Authorization'] = 'Token ' + token;
+    return { headers };
+}
+
+/* ==================== LOGIN ==================== */
+$('#loginForm').on('submit', function (e) {
+    e.preventDefault();
+    const data = {
+        username: $('[name="username"]', this).val().trim(),
+        password: $('[name="password"]', this).val()
+    };
+
+    log('Login attempt', data);
+
+    $.ajax({
+        url: API.login,
+        method: 'POST',
+        data: data,
+        ...ajaxSettings()
+    })
+    .done(resp => {
+        log('Login SUCCESS', { token: resp.token, user: resp.user });
+        sessionStorage.setItem('authToken', resp.token);
+        showMsg('Login successful! Redirecting...', false);
+        setTimeout(() => location.href = '/dashboard/', 1200);
+    })
+    .fail(xhr => {
+        log('Login FAILED', { status: xhr.status, response: xhr.responseJSON });
+        const err = xhr.responseJSON?.non_field_errors?.[0] ||
+                    xhr.responseJSON?.detail ||
+                    xhr.responseText ||
+                    'Invalid username or password';
+        showMsg(err);
+    });
+});
+
+/* ==================== CANVAS PARTICLES ANIMATION ==================== */
+(function() {
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationId;
+
+    function resize() {
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1.5 - 0.75;
+            this.speedY = Math.random() * 1.5 - 0.75;
+            this.color = `hsla(${200 + Math.random() * 60}, 70%, 60%, 0.6)`;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.size > 0.2) this.size -= 0.01;
+            if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height || this.size <= 0.2) {
+                this.reset();
+            }
+        }
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function init() {
+        particles = [];
+        const count = Math.min(120, canvas.width / 8);
+        for (let i = 0; i < count; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    function connectParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = dx * dx + dy * dy;
+                if (dist < 10000) {
+                    ctx.strokeStyle = `rgba(100, 150, 255, ${0.2 * (1 - dist / 10000)})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        connectParticles();
+        animationId = requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => {
+        resize();
+        init();
+    });
+
+    // Start
+    if (canvas) {
+        resize();
+        init();
+        animate();
+    }
+
+    // Cleanup
+    window.addEventListener('beforeunload', () => cancelAnimationFrame(animationId));
+})();
+</script>
 
 </body>
 </html>
